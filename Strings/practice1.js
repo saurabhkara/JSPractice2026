@@ -70,7 +70,7 @@ function palindromeStr1(str){
     return reverseStr === str;
 }
 
-console.log(palindromeStr1('madam'))
+// console.log(palindromeStr1('madam'))
 
 function palindromeStr2(str){
     if(typeof str !=='string'){
@@ -94,4 +94,44 @@ function palindromeStr2(str){
 
 }
 
-console.log(palindromeStr2('madam'))
+// console.log(palindromeStr2('madam'));
+
+//Q.3 Count the occurance of 'a' character in string
+
+function countCharacterA(delimetere, str){
+    if(typeof str !=='string'){
+        return 
+    }
+    if(str===''){
+        return 0;
+    }
+
+    let count =0;
+    for(let i=0;i<str.length;i++){
+        if(delimetere ===str[i]){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countCharacterA('a','saurabh'))
+
+
+//Q.4 Count the frequency of every Character
+
+function freequencyOfChar(str){
+    const obj={};
+    for(let i=0;i<str.length;i++){
+        if(obj[str[i]]){
+            obj[str[i]]= obj[str[i]] +1
+        }else{
+            obj[str[i]]=1;
+        }
+    }
+    for(const[ key, value] of Object.entries(obj)){
+        console.log(`${key} : ${value}`)
+    }
+}
+
+freequencyOfChar('saurabh');
